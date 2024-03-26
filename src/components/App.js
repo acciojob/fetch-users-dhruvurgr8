@@ -24,6 +24,7 @@ const App = () => {
         <h1>Blue Whales</h1>
         <button onClick={handleClick}>Get User List</button>
       </div>
+      
       <table>
         <tr>
           <th>First Name</th>
@@ -31,6 +32,7 @@ const App = () => {
           <th>Email</th>
           <th>Avatar</th>
         </tr>
+        {data.length == 0 && <p>No data found to Display.</p>}
         {data.length > 0 &&
           data.map((user) => {
             return (
